@@ -80,6 +80,50 @@ const main = async () => {
   })
   char2.save()
 
+  const char3 = await new Character({
+    player: player3._id,
+    name: 'Nebuzan',
+    race: 'Dragonborn',
+    class: 'Paladin',
+    charSheet: true,
+    link: 'https://ddb.ac/characters/38203445/8KTr97',
+    comment: 'Pali ftw.'
+  })
+  char3.save()
+
+  const char4 = await new Character({
+    player: player4._id,
+    name: 'Cecelia',
+    race: 'Half-Elf',
+    class: 'Sorceror',
+    charSheet: true,
+    link: 'https://ddb.ac/characters/38203445/8KTr97',
+    comment: 'I would never be a dwarf.'
+  })
+  char4.save()
+
+  const char5 = await new Character({
+    player: player5._id,
+    name: 'Daz',
+    race: 'Goliath',
+    class: 'Barbarian',
+    charSheet: true,
+    link: 'https://ddb.ac/characters/38203445/8KTr97',
+    comment: 'Crush!'
+  })
+  char5.save()
+
+  const char6 = await new Character({
+    player: player6._id,
+    name: 'Shenny',
+    race: 'Halfling',
+    class: 'Wizard',
+    charSheet: true,
+    link: 'https://ddb.ac/characters/38203445/8KTr97',
+    comment: 'Me so smart!'
+  })
+  char6.save()
+
   const party1 = await new Party({
     name: 'Denver DND',
     location: 'Denver, CO',

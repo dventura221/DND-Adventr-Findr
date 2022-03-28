@@ -18,8 +18,6 @@ A fullstack app designed to connect Dungeons and Dragons players and parties, to
 
 #### Built over 5 days as a school project during 3/28/2022 - 4/1/2022.
 
-#### [Trello Adventr Findr](https://trello.com/b/s6OhRAnP/dnd-adventr-findr)
-
 ---
 
 ### **_Technologies Used_**
@@ -35,6 +33,8 @@ A fullstack app designed to connect Dungeons and Dragons players and parties, to
 ---
 
 ### **_How to Get Started_**
+
+#### [Trello Adventr Findr](https://trello.com/b/s6OhRAnP/dnd-adventr-findr)
 
 #### - Front-end expected to have multiple React components to display information about individual players, groups of players formed into parties, and characters belonging to each player.
 

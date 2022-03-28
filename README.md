@@ -12,13 +12,13 @@
 
 ### **_Description_**
 
-A fullstack app designed to connect Dungeons and Dragons players and parties, to eachother. Allows single players to find adventuring parties looking to add to their roster, and vice-versa.
+A fullstack app designed to connect Dungeons and Dragons players and parties, to eachother. Allows single players to find adventuring parties looking to add to their roster, and vice-versa. To include ability to add, change, delete, and search database.
 
 ![LFG](https://steemitimages.com/DQmTsXXX4MLcb6LS9RXH8rrr6RS17EWipY8joeyXPMo5FqX/dd-meme-i-want-you-for-adventure.jpg)
 
 #### Built over 5 days as a school project during 3/28/2022 - 4/1/2022.
 
-#### [Trello Adventr Findr] ()
+#### [Trello Adventr Findr](https://trello.com/b/s6OhRAnP/dnd-adventr-findr)
 
 ---
 
@@ -46,7 +46,13 @@ A fullstack app designed to connect Dungeons and Dragons players and parties, to
 
 ### **_Screenshots_**
 
-#### PENDING
+#### Entity Relationship Diagram
+
+![ERD](https://i.imgur.com/RtbGVoq.png)
+
+#### Component Hierarchy Diagram
+
+![CHD](https://i.imgur.com/gemXbJx.png)
 
 ---
 
@@ -62,6 +68,12 @@ A fullstack app designed to connect Dungeons and Dragons players and parties, to
 
 #### - [ ] Update 5 - Stretch Goal of adding communication into app, via email?
 
+#### - [ ] Update 6 - Stretch Goal to link D&D Beyond Character sheet to Character Card.
+
 ---
 
 ### **_Credits_**
+
+[D&DBeyond](https://www.dndbeyond.com/forums/d-d-beyond-general/looking-for-players-groups/31952-looking-for-1-or-2-more-players-in-houston-to)
+
+[Wizards of the Coast](https://company.wizards.com/en)

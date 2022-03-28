@@ -1,4 +1,4 @@
-# D&D Adventure Finder
+# D&D Adventr Findr (Adventure Finder)
 
 ## Date: 3/28/2022 - 4/1/2022
 

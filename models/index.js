@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const PlayerSchema = require('./Player')
 const PartySchema = require('./Party')
-const CharacterSchema = requre('./Character')
+const CharacterSchema = require('./Character')
 
 const Player = mongoose.model('Player', PlayerSchema)
 const Party = mongoose.model('Party', PartySchema)

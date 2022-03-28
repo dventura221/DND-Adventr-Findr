@@ -58,71 +58,62 @@ const main = async () => {
   })
   player6.save()
 
-  const char1 = await new Character({
-    player: player1._id,
-    name: 'Gonthor',
-    race: 'Dwarf',
-    class: 'Fighter',
-    charSheet: true,
-    link: 'https://ddb.ac/characters/38203445/8KTr97',
-    comment: ''
-  })
-  char1.save()
-
-  const char2 = await new Character({
-    player: player2._id,
-    name: 'Sequelia',
-    race: 'Elf',
-    class: 'Rogue',
-    charSheet: true,
-    link: 'https://ddb.ac/characters/38203445/8KTr97',
-    comment: 'I love being sneaky.'
-  })
-  char2.save()
-
-  const char3 = await new Character({
-    player: player3._id,
-    name: 'Nebuzan',
-    race: 'Dragonborn',
-    class: 'Paladin',
-    charSheet: true,
-    link: 'https://ddb.ac/characters/38203445/8KTr97',
-    comment: 'Pali ftw.'
-  })
-  char3.save()
-
-  const char4 = await new Character({
-    player: player4._id,
-    name: 'Cecelia',
-    race: 'Half-Elf',
-    class: 'Sorceror',
-    charSheet: true,
-    link: 'https://ddb.ac/characters/38203445/8KTr97',
-    comment: 'I would never be a dwarf.'
-  })
-  char4.save()
-
-  const char5 = await new Character({
-    player: player5._id,
-    name: 'Daz',
-    race: 'Goliath',
-    class: 'Barbarian',
-    charSheet: true,
-    link: 'https://ddb.ac/characters/38203445/8KTr97',
-    comment: 'Crush!'
-  })
-  char5.save()
-
-  const char6 = await new Character({
-    player: player6._id,
-    name: 'Shenny',
-    race: 'Halfling',
-    class: 'Wizard',
-    charSheet: true,
-    link: 'https://ddb.ac/characters/38203445/8KTr97',
-    comment: 'Me so smart!'
-  })
-  char6.save()
+  const characters = [
+    {
+      player: player1._id,
+      name: 'Gonthor',
+      race: 'Dwarf',
+      class: 'Fighter',
+      charSheet: true,
+      link: 'https://ddb.ac/characters/38203445/8KTr97',
+      comment: ''
+    },
+    {
+      player: player2._id,
+      name: 'Sequelia',
+      race: 'Elf',
+      class: 'Rogue',
+      charSheet: true,
+      link: 'https://ddb.ac/characters/38203445/8KTr97',
+      comment: 'I love being sneaky.'
+    },
+    {
+      player: player3._id,
+      name: 'Nebuzan',
+      race: 'Dragonborn',
+      class: 'Paladin',
+      charSheet: true,
+      link: 'https://ddb.ac/characters/38203445/8KTr97',
+      comment: 'Pali ftw.'
+    },
+    {
+      player: player4._id,
+      name: 'Cecelia',
+      race: 'Half-Elf',
+      class: 'Sorceror',
+      charSheet: true,
+      link: 'https://ddb.ac/characters/38203445/8KTr97',
+      comment: 'I would never be a dwarf.'
+    },
+    {
+      player: player5._id,
+      name: 'Daz',
+      race: 'Goliath',
+      class: 'Barbarian',
+      charSheet: true,
+      link: 'https://ddb.ac/characters/38203445/8KTr97',
+      comment: 'Crush!'
+    },
+    {
+      player: player6._id,
+      name: 'Shenny',
+      race: 'Halfling',
+      class: 'Wizard',
+      charSheet: true,
+      link: 'https://ddb.ac/characters/38203445/8KTr97',
+      comment: 'Me so smart!'
+    }
+  ]
 
   const parties = [
     {
@@ -133,7 +124,7 @@ const main = async () => {
       looking4Players: true,
       dungeonMaster: player1._id,
       players: [player2._id],
-      characters: [char1._id, char2._id],
+      characters: [characters[0]._id, characters[1]._id],
       comment: 'LFP 4 local Denver metro'
     },
     {
@@ -144,11 +135,12 @@ const main = async () => {
       looking4Players: true,
       dungeonMaster: player3._id,
       players: [player4._id],
-      characters: [char3._id, char4._id],
+      characters: [characters[4]._id, characters[5]._id],
       comment: 'LFP, online ok'
     }
   ]
 
+  await Character.insertMany(characters)
   await Party.insertMany(parties)
   console.log('Created Players, Parties, and Characters!')
 }

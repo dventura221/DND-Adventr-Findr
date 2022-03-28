@@ -54,6 +54,8 @@ A fullstack app designed to connect Dungeons and Dragons players and parties, to
 
 ![CHD](https://i.imgur.com/gemXbJx.png)
 
+[Draw.io](https://drive.google.com/file/d/19Iq-Fg5vLHkqjrasoVwYrMJdMVmjO2k0/view?usp=sharing)
+
 ---
 
 ### **_Future Updates/Stretch Goals_**

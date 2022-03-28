@@ -124,16 +124,32 @@ const main = async () => {
   })
   char6.save()
 
-  const party1 = await new Party({
-    name: 'Denver DND',
-    location: 'Denver, CO',
-    online: false,
-    inPerson: true,
-    looking4Players: true,
-    dungeonMaster: player1._id,
-    players: [player2._id]
-  })
+  const parties = [
+    {
+      name: 'Denver DND',
+      location: 'Denver, CO',
+      online: false,
+      inPerson: true,
+      looking4Players: true,
+      dungeonMaster: player1._id,
+      players: [player2._id],
+      characters: [char1._id, char2._id],
+      comment: 'LFP 4 local Denver metro'
+    },
+    {
+      name: 'Great Lakes DND',
+      location: 'Remote',
+      online: true,
+      inPerson: false,
+      looking4Players: true,
+      dungeonMaster: player3._id,
+      players: [player4._id],
+      characters: [char3._id, char4._id],
+      comment: 'LFP, online ok'
+    }
+  ]
 
+  await Party.insertMany(parties)
   console.log('Created Players, Parties, and Characters!')
 }
 

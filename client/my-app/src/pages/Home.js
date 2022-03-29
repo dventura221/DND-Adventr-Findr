@@ -7,30 +7,31 @@ import PartyCard from '../components/PartyCard'
 
 const Home = () => {
   const [parties, setParties] = useState([])
-  const [searchResult, setSearchResult] = useState([])
-  const [searchQuery, setSearchQuery] = useState('')
-  const [searched, setSearched] = useState(false)
+  //const [searchResult, setSearchResult] = useState([])
+  //const [searchQuery, setSearchQuery] = useState('')
+  //const [searched, setSearched] = useState(false)
 
   useEffect(() => {
     const getParties = async () => {
       const res = await axios.get(`http://localhost:3001/parties`)
+      console.log(res)
       setParties(res.data)
     }
     getParties()
   }, [])
 
-  const handleChange = (e) => {
-    setSearchQuery(e.target.value.toLowerCase())
-  }
+  // const handleChange = (e) => {
+  //   setSearchQuery(e.target.value.toLowerCase())
+  // }
 
   return (
     <div>
       <div className="search">
         <h1 className="pageTitle">Adventr Finder</h1>
         <Search
-          onChange={handleChange}
-          value={searchQuery}
-          //onSubmit={getSearchResult}
+        //onChange={handleChange}
+        //value={searchQuery}
+        //onSubmit={getSearchResult}
         />
       </div>
       <div className="parties">

@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3001
 
 const db = require('./db')
 const { Player, Party, Character } = require('./models')
+const { add } = require('./models/Player')
 
 const app = express()
 
@@ -58,6 +59,85 @@ app.get('/parties/:id', async (req, res) => {
   } catch (e) {
     console.log(e)
     res.send('Party not found!')
+  }
+})
+
+// Post new Player, Party, Char
+
+app.post('/players', async (req, res) => {
+  try {
+    const player = await new Player(req.body)
+    await player.save()
+    return res.status(201).json({
+      player
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+})
+
+app.post('/parties', async (req, res) => {
+  try {
+    const party = await new Party(req.body)
+    await party.save()
+    return res.status(201).json({
+      party
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+})
+
+app.post('/characters', async (req, res) => {
+  try {
+    const char = await new Character(req.body)
+    await char.save()
+    return res.status(201).json({
+      char
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+})
+
+// Delete Player, Party, Char by ID
+
+app.delete('/players/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Player.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Player deleted')
+    }
+    throw new Error('Player not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+})
+
+app.delete('/parties/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Party.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Party deleted')
+    }
+    throw new Error('Party not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+})
+
+app.delete('/characters/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Character.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Character deleted')
+    }
+    throw new Error('Character not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
   }
 })
 

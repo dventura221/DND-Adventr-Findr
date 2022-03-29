@@ -18,6 +18,8 @@ app.get('/', (req, res) => {
   res.send('I am root!')
 })
 
+//Get list of all for Players, Parties, Characters
+
 app.get('/players', async (req, res) => {
   const players = await Player.find()
   res.json(players)
@@ -32,6 +34,32 @@ app.get('/characters', async (req, res) => {
   const characters = await Character.find()
   res.json(characters)
 }) //Check - works in Insomnia
+
+// Search for single Player, Party
+
+app.get('/players/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const player = await Player.findById(id)
+    if (!player) throw Error('Player not found')
+    res.json(player)
+  } catch (e) {
+    console.log(e)
+    res.send('Player not found!')
+  }
+})
+
+app.get('/parties/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const party = await Party.findById(id)
+    if (!party) throw Error('Party not found')
+    res.json(party)
+  } catch (e) {
+    console.log(e)
+    res.send('Party not found!')
+  }
+})
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)

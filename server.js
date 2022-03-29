@@ -141,6 +141,41 @@ app.delete('/characters/:id', async (req, res) => {
   }
 })
 
+// Update
+
+app.put('/players/:id', async (req, res) => {
+  try {
+    const player = await Player.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.json(player)
+  } catch (err) {
+    res.send(err.message)
+  }
+})
+
+app.put('/parties/:id', async (req, res) => {
+  try {
+    const party = await Party.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.json(party)
+  } catch (err) {
+    res.send(err.message)
+  }
+})
+
+app.put('/characters/:id', async (req, res) => {
+  try {
+    const char = await Character.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.json(char)
+  } catch (err) {
+    res.send(err.message)
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
 })

@@ -7,9 +7,9 @@ import PartyCard from '../components/PartyCard'
 
 const Home = () => {
   const [parties, setParties] = useState([])
-  //const [searchResult, setSearchResult] = useState([])
-  //const [searchQuery, setSearchQuery] = useState('')
-  //const [searched, setSearched] = useState(false)
+  const [searchResult, setSearchResult] = useState([])
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searched, setSearched] = useState(false)
 
   useEffect(() => {
     const getParties = async () => {
@@ -20,18 +20,30 @@ const Home = () => {
     getParties()
   }, [])
 
-  // const handleChange = (e) => {
-  //   setSearchQuery(e.target.value.toLowerCase())
-  // }
+  const getSearchResult = async (e) => {
+    e.preventDefault()
+    const res = await axios.get(`http://localhost:3001/parties/`)
+    const searchedParties = res.data.filter((item) => {
+      return item.name.toLowerCase().includes(`${searchQuery}`)
+    })
+    console.log(searchedParties)
+    setSearchQuery('')
+    setSearched(true)
+    setSearchResult(searchedParties)
+  }
+
+  const handleChange = (e) => {
+    setSearchQuery(e.target.value.toLowerCase())
+  }
 
   return (
     <div>
       <div className="search">
-        <h1 className="pageTitle">Adventr Finder</h1>
+        <h1 className="pageTitle">Adventr Findr</h1>
         <Search
-        //onChange={handleChange}
-        //value={searchQuery}
-        //onSubmit={getSearchResult}
+          onChange={handleChange}
+          value={searchQuery}
+          onSubmit={getSearchResult}
         />
       </div>
       <div className="parties">

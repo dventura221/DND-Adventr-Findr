@@ -38,7 +38,11 @@ const Home = () => {
         <h1>Parties</h1>
         <section className="party-grid">
           {parties.map((party) => (
-            <PartyCard name={party.name} location={party.location} />
+            <PartyCard
+              name={party.name}
+              location={party.location}
+              key={party._id}
+            />
           ))}
         </section>
       </div>

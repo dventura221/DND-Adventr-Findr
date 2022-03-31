@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import ViewParty from './pages/ViewParty'
 import NavBar from './components/NavBar'
 import CreateParty from './components/CreateParty'
+import ViewPlayer from './pages/ViewPlayer'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/parties/:id" element={<ViewParty />} />
           <Route path="createparty" element={<CreateParty />} />
+          <Route path="/players/:id" element={<ViewPlayer />} />
         </Routes>
       </main>
     </div>

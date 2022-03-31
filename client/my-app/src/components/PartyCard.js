@@ -3,7 +3,7 @@ const PartyCard = (props) => {
     <div className="partyCard" onClick={props.onClick}>
       <div className="partCardText">
         <h3>{props.name}</h3>
-        <h3>{props.location}</h3>
+        <h4>{props.location}</h4>
       </div>
     </div>
   )

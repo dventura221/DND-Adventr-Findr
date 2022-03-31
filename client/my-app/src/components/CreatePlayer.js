@@ -63,6 +63,15 @@ const CreatePlayer = () => {
           <option value="Yes">Yes, looking for a party.</option>
           <option value="No">No, not looking.</option>
         </select>
+        <input
+          type="text"
+          name="Comment"
+          value={addPlayer.comment}
+          placeholder="Comments"
+          onChange={(e) =>
+            setAddPlayer({ ...addPlayer, comment: e.target.value })
+          }
+        ></input>
         <button className="submitButton" text="Submit">
           Add Player
         </button>

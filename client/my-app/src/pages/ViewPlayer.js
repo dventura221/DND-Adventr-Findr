@@ -6,6 +6,13 @@ import axios from 'axios'
 const ViewPlayer = (props) => {
   let { id } = useParams()
   const [playerDetail, setPlayerDetails] = useState({})
+  const [updatePlayer, setUpdatePlayer] = useState({
+    name: playerDetail.name,
+    age: playerDetail.age,
+    location: playerDetail.location,
+    looking4Party: playerDetail.looking4Party,
+    comment: playerDetail.comment
+  })
 
   useEffect(() => {
     const getPlayerDetails = async () => {
@@ -22,6 +29,13 @@ const ViewPlayer = (props) => {
       .catch((err) => console.log(err.data))
   }
 
+  const handleUpdatePlayer = async () => {
+    const res = await axios
+      .put(`http://localhost:3001/players/${id}`, updatePlayer)
+      .then((res) => console.log('update player successful'))
+      .catch((err) => console.log(err.data))
+  }
+
   return (
     <div>
       <div>
@@ -33,6 +47,66 @@ const ViewPlayer = (props) => {
             Delete
           </button>
         </div>
+      </div>
+      <div>
+        <form onSubmit={handleUpdatePlayer}>
+          <input
+            type="text"
+            name="Player Name"
+            value={updatePlayer.name}
+            placeholder="Player Name"
+            onChange={(e) =>
+              setUpdatePlayer({ ...updatePlayer, name: e.target.value })
+            }
+          ></input>
+          <input
+            type="number"
+            name="Age"
+            value={updatePlayer.age}
+            placeholder="Player Age"
+            onChange={(e) =>
+              setUpdatePlayer({ ...updatePlayer, age: e.target.value })
+            }
+          ></input>
+          <input
+            type="text"
+            name="Location"
+            value={updatePlayer.location}
+            placeholder="Location"
+            onChange={(e) =>
+              setUpdatePlayer({ ...updatePlayer, location: e.target.value })
+            }
+          ></input>
+          <select
+            id="looking4Party"
+            name="Looking4Party"
+            value={updatePlayer.looking4Party}
+            onChange={(e) =>
+              setUpdatePlayer({
+                ...updatePlayer,
+                looking4Party: e.target.value
+              })
+            }
+          >
+            <option value="" selected disabled hidden>
+              Looking for Party?
+            </option>
+            <option value="Yes">Yes, looking for a party.</option>
+            <option value="No">No, not looking.</option>
+          </select>
+          <input
+            type="text"
+            name="Comment"
+            value={updatePlayer.comment}
+            placeholder="Comments"
+            onChange={(e) =>
+              setUpdatePlayer({ ...updatePlayer, comment: e.target.value })
+            }
+          ></input>
+          <button className="submitButton" text="Submit">
+            Update Player
+          </button>
+        </form>
       </div>
     </div>
   )

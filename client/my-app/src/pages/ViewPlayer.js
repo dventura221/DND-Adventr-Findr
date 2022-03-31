@@ -15,6 +15,13 @@ const ViewPlayer = (props) => {
     getPlayerDetails()
   }, [id])
 
+  const deletePlayer = async () => {
+    const res = await axios
+      .delete(`http://localhost:3001/players/${id}`)
+      .then((res) => console.log('delete player successful'))
+      .catch((err) => console.log(err.data))
+  }
+
   return (
     <div>
       <div>
@@ -22,6 +29,9 @@ const ViewPlayer = (props) => {
           <h3>{playerDetail.name}</h3>
           <h3>{playerDetail.location}</h3>
           <p>{playerDetail.comment}</p>
+          <button className="btn btn-danger" onClick={deletePlayer}>
+            Delete
+          </button>
         </div>
       </div>
     </div>

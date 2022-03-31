@@ -14,10 +14,10 @@ const CreateParty = () => {
     comment: ''
   })
 
-  const handleChange = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     axios
-      .post('http://localhost:3001/parties, addParty')
+      .post(`http://localhost:3001/parties`, addParty)
       .then((res) => console.log('successful'))
       .catch((err) => console.log(err.data))
   }
@@ -25,7 +25,7 @@ const CreateParty = () => {
   return (
     <div className="addParty">
       <h1>Add Party</h1>
-      <form onSubmit={handleChange}>
+      <form onSubmit={handleSubmit}>
         <input
           required
           type="text"
@@ -109,6 +109,9 @@ const CreateParty = () => {
             setAddParty({ ...addParty, comment: e.target.value })
           }
         ></input>
+        <button className="submitButton" text="Submit">
+          Add Party
+        </button>
       </form>
     </div>
   )

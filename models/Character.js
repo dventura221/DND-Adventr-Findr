@@ -6,7 +6,7 @@ const Character = new Schema(
     name: { type: String, required: true },
     race: { type: String, required: true },
     class: { type: String, required: true },
-    charSheet: { type: Boolean, required: false },
+    charSheet: { type: String, required: false },
     link: { type: String, required: false },
     comment: { type: String, required: false }
   },

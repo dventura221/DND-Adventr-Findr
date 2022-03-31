@@ -14,7 +14,6 @@ const Home = () => {
   useEffect(() => {
     const getParties = async () => {
       const res = await axios.get(`http://localhost:3001/parties`)
-      console.log(res)
       setParties(res.data)
     }
     getParties()
@@ -46,7 +45,7 @@ const Home = () => {
         />
       </div>
       <div className="parties">
-        <h1>Parties</h1>
+        <h3>Parties</h3>
         <section className="party-grid">
           {parties.map((party) => (
             <Link

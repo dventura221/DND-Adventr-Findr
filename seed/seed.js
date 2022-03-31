@@ -8,7 +8,7 @@ const main = async () => {
     name: 'David East',
     location: 'Denver, CO',
     age: 34,
-    looking4Party: false,
+    looking4Party: 'Yes',
     comment: 'Veteran DM and player LFG, local.'
   })
   player1.save()
@@ -17,7 +17,7 @@ const main = async () => {
     name: 'Shannon South',
     location: 'Boulder, CO',
     age: 32,
-    looking4Party: true,
+    looking4Party: 'Yes',
     comment: 'New to dnd, would need help.'
   })
   player2.save()
@@ -26,7 +26,7 @@ const main = async () => {
     name: 'Michael Boss',
     location: 'Chicago, IL',
     age: 42,
-    looking4Party: false,
+    looking4Party: 'Yes',
     comment: 'DM LF players.'
   })
   player3.save()
@@ -35,7 +35,7 @@ const main = async () => {
     name: 'Stephanie Boss',
     location: 'Chicago, IL',
     age: 40,
-    looking4Party: false,
+    looking4Party: 'Yes',
     comment: 'I love dnd.'
   })
   player4.save()
@@ -44,7 +44,7 @@ const main = async () => {
     name: 'Sydney Borealis',
     location: 'Los Angeles, CA',
     age: 22,
-    looking4Party: true,
+    looking4Party: 'Yes',
     comment: 'DM/player LF party'
   })
   player5.save()
@@ -53,7 +53,7 @@ const main = async () => {
     name: 'Jesse Ferguson',
     location: 'San Diego, CA',
     age: 24,
-    looking4Party: true,
+    looking4Party: 'Yes',
     comment: 'Player LF group'
   })
   player6.save()
@@ -63,7 +63,7 @@ const main = async () => {
     name: 'Gonthor',
     race: 'Dwarf',
     class: 'Fighter',
-    charSheet: true,
+    charSheet: 'Yes',
     link: 'https://ddb.ac/characters/38203445/8KTr97',
     comment: ''
   })
@@ -74,7 +74,7 @@ const main = async () => {
     name: 'Sequelia',
     race: 'Elf',
     class: 'Rogue',
-    charSheet: true,
+    charSheet: 'Yes',
     link: 'https://ddb.ac/characters/38203445/8KTr97',
     comment: 'I love being sneaky.'
   })
@@ -85,7 +85,7 @@ const main = async () => {
     name: 'Nebuzan',
     race: 'Dragonborn',
     class: 'Paladin',
-    charSheet: true,
+    charSheet: 'Yes',
     link: 'https://ddb.ac/characters/38203445/8KTr97',
     comment: 'Pali ftw.'
   })
@@ -96,7 +96,7 @@ const main = async () => {
     name: 'Cecelia',
     race: 'Half-Elf',
     class: 'Sorceror',
-    charSheet: true,
+    charSheet: 'Yes',
     link: 'https://ddb.ac/characters/38203445/8KTr97',
     comment: 'I would never be a dwarf.'
   })
@@ -107,7 +107,7 @@ const main = async () => {
     name: 'Daz',
     race: 'Goliath',
     class: 'Barbarian',
-    charSheet: true,
+    charSheet: 'Yes',
     link: 'https://ddb.ac/characters/38203445/8KTr97',
     comment: 'Crush!'
   })
@@ -118,7 +118,7 @@ const main = async () => {
     name: 'Shenny',
     race: 'Halfling',
     class: 'Wizard',
-    charSheet: true,
+    charSheet: 'Yes',
     link: 'https://ddb.ac/characters/38203445/8KTr97',
     comment: 'Me so smart!'
   })
@@ -128,9 +128,8 @@ const main = async () => {
     {
       name: 'Denver DND',
       location: 'Denver, CO',
-      online: false,
-      inPerson: true,
-      looking4Players: true,
+      format: 'In-Person',
+      looking4Players: 'Yes',
       dungeonMaster: player1._id,
       players: [player2._id],
       characters: [char1._id, char2._id],
@@ -139,9 +138,8 @@ const main = async () => {
     {
       name: 'Great Lakes DND',
       location: 'Remote',
-      online: true,
-      inPerson: false,
-      looking4Players: true,
+      format: 'Online',
+      looking4Players: 'Yes',
       dungeonMaster: player3._id,
       players: [player4._id],
       characters: [char3._id, char4._id],

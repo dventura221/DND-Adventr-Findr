@@ -10,6 +10,7 @@ const CreateParty = () => {
     looking4Players: '',
     dungeonMaster: '',
     players: [],
+    characters: [],
     comment: ''
   })
 
@@ -55,7 +56,7 @@ const CreateParty = () => {
             Online or In-Person?
           </option>
           <option value="Online">Online</option>
-          <option value="InPerson">In-Person</option>
+          <option value="In-Person">In-Person</option>
         </select>
         <select
           id="looking"
@@ -72,6 +73,42 @@ const CreateParty = () => {
           <option value="Yes">Yes, looking for players.</option>
           <option value="No">No, not looking for players.</option>
         </select>
+        <input
+          type="text"
+          name="Dungeon Master"
+          value={addParty.dungeonMaster}
+          placeholder="Dungeon Master"
+          onChange={(e) =>
+            setAddParty({ ...addParty, dungeonMaster: e.target.value })
+          }
+        ></input>
+        <input
+          type="text"
+          name="Players"
+          value={addParty.players}
+          placeholder="Players"
+          onChange={(e) =>
+            setAddParty({ ...addParty, players: e.target.value })
+          }
+        ></input>
+        <input
+          type="text"
+          name="Characters"
+          value={addParty.characters}
+          placeholder="Characters"
+          onChange={(e) =>
+            setAddParty({ ...addParty, characters: e.target.value })
+          }
+        ></input>
+        <input
+          type="text"
+          name="Comment"
+          value={addParty.comment}
+          placeholder="Comments"
+          onChange={(e) =>
+            setAddParty({ ...addParty, comment: e.target.value })
+          }
+        ></input>
       </form>
     </div>
   )

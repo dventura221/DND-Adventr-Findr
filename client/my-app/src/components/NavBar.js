@@ -9,6 +9,9 @@ const NavBar = () => {
       <Link className="navLink" to="/createparty">
         Add Party
       </Link>
+      <Link className="navLink" to="/createplayer">
+        Add Player
+      </Link>
       <h1 className="pageTitle">Adventr Findr</h1>
     </nav>
   )

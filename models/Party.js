@@ -6,8 +6,8 @@ const Party = new Schema(
     location: { type: String, required: true },
     format: { type: String, required: true },
     looking4Players: { type: String, required: true },
-    dungeonMaster: { type: Schema.Types.ObjectId, ref: 'players' },
-    players: [{ type: Schema.Types.ObjectId, ref: 'players' }],
+    dungeonMaster: { type: String, required: true },
+    players: [{ type: String, required: true }],
     comment: { type: String, required: false }
   },
   { timestamps: true }

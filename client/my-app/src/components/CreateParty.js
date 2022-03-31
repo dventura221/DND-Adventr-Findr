@@ -9,8 +9,8 @@ const CreateParty = () => {
     format: '',
     looking4Players: '',
     dungeonMaster: '',
-    players: [],
-    characters: [],
+    players: '',
+    characters: '',
     comment: ''
   })
 

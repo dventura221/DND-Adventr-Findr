@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import ViewParty from './pages/ViewParty'
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path="parties/:id" element={<ViewParty />} /> */}
         </Routes>
       </main>
     </div>

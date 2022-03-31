@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Search from '../components/Search'
 import PartyCard from '../components/PartyCard'
 import PlayerCard from '../components/PlayerCard'
+import SearchPlayers from '../components/SearchPlayers'
 
 const Home = () => {
   const [parties, setParties] = useState([])
@@ -88,7 +89,7 @@ const Home = () => {
         </section>
       </div>
       <div className="searchForPlayer">
-        <Search
+        <SearchPlayers
           onChange={handleChangePlayer}
           value={searchQueryPlayers}
           onSubmit={getSearchResultPlayers}

@@ -2,7 +2,6 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import res from 'express/lib/response'
 
 const ViewParty = (props) => {
   let { id } = useParams()

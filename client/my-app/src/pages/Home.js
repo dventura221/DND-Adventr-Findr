@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Search from '../components/Search'
 import PartyCard from '../components/PartyCard'
 
@@ -39,7 +39,6 @@ const Home = () => {
   return (
     <div>
       <div className="search">
-        <h1 className="pageTitle">Adventr Findr</h1>
         <Search
           onChange={handleChange}
           value={searchQuery}

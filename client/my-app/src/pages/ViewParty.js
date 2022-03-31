@@ -42,9 +42,13 @@ const ViewParty = (props) => {
   return (
     <div>
       <div className="party-details">
-        <h3>{partyDetail.name}</h3>
+        <h2>{partyDetail.name}</h2>
         <h3>{partyDetail.location}</h3>
-        <p>{partyDetail.comment}</p>
+        <p>Format: {partyDetail.format}</p>
+        <p>Comments: {partyDetail.comment}</p>
+        <p>Dungeon Master: {partyDetail.dungeonMaster}</p>
+        <p>Players: {partyDetail.players}</p>
+        <p>Characters: {partyDetail.characters}</p>
       </div>
       <button className="btn btn-danger" onClick={deleteParty}>
         Delete

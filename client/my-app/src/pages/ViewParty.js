@@ -15,6 +15,13 @@ const ViewParty = (props) => {
     getPartyDetails()
   }, [id])
 
+  const deleteParty = async () => {
+    const res = await axios
+      .delete(`http://localhost:3001/parties/${id}`)
+      .then((res) => console.log('delete party successful'))
+      .catch((err) => console.log(err.data))
+  }
+
   return (
     <div>
       <div className="party-details">
@@ -22,6 +29,9 @@ const ViewParty = (props) => {
         <h3>{partyDetail.location}</h3>
         <p>{partyDetail.comment}</p>
       </div>
+      <button className="btn btn-danger" onClick={deleteParty}>
+        Delete
+      </button>
     </div>
   )
 }

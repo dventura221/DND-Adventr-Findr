@@ -9,7 +9,7 @@ const ViewChar = (props) => {
 
   useEffect(() => {
     const getCharDetails = async () => {
-      const res = await axios.get(`http://localhost:3001/characters/${id}`)
+      const res = await axios.get(`/characters/${id}`)
       setCharDetail(res.data)
     }
     getCharDetails()

@@ -16,7 +16,7 @@ const ViewPlayer = (props) => {
 
   useEffect(() => {
     const getPlayerDetails = async () => {
-      const res = await axios.get(`http://localhost:3001/players/${id}`)
+      const res = await axios.get(`/players/${id}`)
       setPlayerDetails(res.data)
     }
     getPlayerDetails()
@@ -24,7 +24,7 @@ const ViewPlayer = (props) => {
 
   const deletePlayer = async () => {
     const res = await axios
-      .delete(`http://localhost:3001/players/${id}`)
+      .delete(`/players/${id}`)
       .then((res) => console.log('delete player successful'))
       .catch((err) => console.log(err.data))
   }

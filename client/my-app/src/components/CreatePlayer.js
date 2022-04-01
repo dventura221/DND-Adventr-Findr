@@ -13,7 +13,7 @@ const CreatePlayer = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     axios
-      .post(`http://localhost:3001/players`, addPlayer)
+      .post(`/players`, addPlayer)
       .then((res) => console.log('successful'))
       .catch((err) => console.log(err.data))
   }

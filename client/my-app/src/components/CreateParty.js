@@ -17,7 +17,7 @@ const CreateParty = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     axios
-      .post(`http://localhost:3001/parties`, addParty)
+      .post(`/parties`, addParty)
       .then((res) => console.log('successful'))
       .catch((err) => console.log(err.data))
   }

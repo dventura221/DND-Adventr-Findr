@@ -19,7 +19,7 @@ const ViewParty = (props) => {
 
   useEffect(() => {
     const getPartyDetails = async () => {
-      const res = await axios.get(`http://localhost:3001/parties/${id}`)
+      const res = await axios.get(`/parties/${id}`)
       setPartyDetails(res.data)
     }
     getPartyDetails()
@@ -27,14 +27,14 @@ const ViewParty = (props) => {
 
   const deleteParty = async () => {
     const res = await axios
-      .delete(`http://localhost:3001/parties/${id}`)
+      .delete(`/parties/${id}`)
       .then((res) => console.log('delete party successful'))
       .catch((err) => console.log(err.data))
   }
 
   const handleUpdateParty = async () => {
     const res = await axios
-      .put(`http://localhost:3001/parties/${id}`, updateParty)
+      .put(`/parties/${id}`, updateParty)
       .then((res) => console.log('update party successful'))
       .catch((err) => console.log(err.data))
   }

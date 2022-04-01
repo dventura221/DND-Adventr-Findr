@@ -19,7 +19,7 @@ const Home = () => {
 
   useEffect(() => {
     const getParties = async () => {
-      const res = await axios.get(`http://localhost:3001/parties`)
+      const res = await axios.get(`/parties`)
       setParties(res.data)
     }
     getParties()
@@ -27,7 +27,7 @@ const Home = () => {
 
   useEffect(() => {
     const getPlayers = async () => {
-      const res = await axios.get(`http://localhost:3001/players`)
+      const res = await axios.get(`/players`)
       setPlayers(res.data)
     }
     getPlayers()
@@ -35,7 +35,7 @@ const Home = () => {
 
   const getSearchResult = async (e) => {
     e.preventDefault()
-    const res = await axios.get(`http://localhost:3001/parties/`)
+    const res = await axios.get(`/parties/`)
     const searchedParties = res.data.filter((item) => {
       return item.name.toLowerCase().includes(`${searchQuery}`)
     })
@@ -47,7 +47,7 @@ const Home = () => {
 
   const getSearchResultPlayers = async (e) => {
     e.preventDefault()
-    const res = await axios.get(`http://localhost:3001/players/`)
+    const res = await axios.get(`/players/`)
     const searchedPlayers = res.data.filter((item) => {
       return item.name.toLowerCase().includes(`${searchQueryPlayers}`)
     })

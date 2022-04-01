@@ -40,6 +40,8 @@ header {
   margin-top: 1vh;
   border: black solid 2px;
   color: black;
+  border-radius: 5px;
+  padding: 5px
 }
 
 .playerCard {
@@ -48,8 +50,24 @@ header {
   margin-top: 1vh;
   border: black solid 2px;
   color: black;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .btn-danger {
   color: red
+}
+
+.player-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px
+}
+
+.party-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px
 }

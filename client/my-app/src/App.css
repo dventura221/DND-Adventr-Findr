@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 .App {
   text-align: center;
-  
+}
+
+.pageTitle {
+  font-family: 'MedievalSharp', cursive;
+  font-weight: 50;
 }
 
 body {
@@ -28,4 +34,18 @@ header {
   color: white;
 }
 
+.partyCard {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 1vh;
+  border: black solid 2px;
+  color: black;
+}
 
+.playerCard {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 1vh;
+  border: black solid 2px;
+  color: black;
+}

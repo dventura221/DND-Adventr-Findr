@@ -67,6 +67,7 @@ const Home = () => {
 
   return (
     <div>
+      <h3>Parties</h3>
       <div className="searchForParty">
         <Search
           onChange={handleChange}
@@ -75,7 +76,6 @@ const Home = () => {
         />
       </div>
       <div className="parties">
-        <h3>Parties</h3>
         <section className="party-grid">
           {parties.map((party) => (
             <Link
@@ -88,6 +88,7 @@ const Home = () => {
           ))}
         </section>
       </div>
+      <h3>Players</h3>
       <div className="searchForPlayer">
         <SearchPlayers
           onChange={handleChangePlayer}
@@ -96,7 +97,6 @@ const Home = () => {
         />
       </div>
       <div className="players">
-        <h3>Players</h3>
         <section className="player-grid">
           {players.map((player) => (
             <Link

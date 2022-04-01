@@ -14,7 +14,7 @@ const NavBar = () => {
           Add Player
         </Link>
       </div>
-      <h1 className="pageTitle">Adventr Findr</h1>
+      <h1 className="pageTitle">ADVENTR FINDR</h1>
     </nav>
   )
 }

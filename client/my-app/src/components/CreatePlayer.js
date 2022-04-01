@@ -4,7 +4,7 @@ import axios from 'axios'
 const CreatePlayer = () => {
   const [addPlayer, setAddPlayer] = useState({
     name: '',
-    age: 0,
+    age: null,
     location: '',
     looking4Party: '',
     comment: ''
@@ -21,7 +21,7 @@ const CreatePlayer = () => {
   return (
     <div className="addPlayer">
       <h1>Add Player</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="createPlayerForm">
         <input
           required
           type="text"

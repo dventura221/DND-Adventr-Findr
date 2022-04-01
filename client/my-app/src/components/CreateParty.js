@@ -25,7 +25,7 @@ const CreateParty = () => {
   return (
     <div className="addParty">
       <h1>Add Party</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="createPartyForm">
         <input
           required
           type="text"

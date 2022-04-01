@@ -41,7 +41,8 @@ header {
   border: black solid 2px;
   color: black;
   border-radius: 5px;
-  padding: 5px
+  padding: 10px;
+  background-color: rgba(255, 255, 255, .5);
 }
 
 .playerCard {
@@ -51,11 +52,13 @@ header {
   border: black solid 2px;
   color: black;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .5);
 }
 
 .btn-danger {
-  color: red
+  color: red;
+  margin: 50px;
 }
 
 .player-grid {
@@ -70,4 +73,30 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 5px
+}
+
+.createPartyForm {
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+  margin-left: 30vh;
+}
+
+.addParty {
+  text-align: center;
+  align-items: center;
+}
+
+.createPlayerForm {
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+  margin-left: 30vh;
+}
+
+.updatePartyForm {
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+  margin-left: 30vh;
 }

@@ -43,10 +43,8 @@ const ViewPlayer = (props) => {
           <h3>Name: {playerDetail.name}</h3>
           <h4>Age: {playerDetail.age}</h4>
           <h3>Location: {playerDetail.location}</h3>
+          <h4>Looking for Party? {playerDetail.looking4Party}</h4>
           <p>Comment: {playerDetail.comment}</p>
-          <button className="btn btn-danger" onClick={deletePlayer}>
-            Delete
-          </button>
         </div>
       </div>
       <div>
@@ -109,6 +107,9 @@ const ViewPlayer = (props) => {
           </button>
         </form>
       </div>
+      <button className="btn btn-danger" onClick={deletePlayer}>
+        Delete
+      </button>
     </div>
   )
 }

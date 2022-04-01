@@ -50,11 +50,8 @@ const ViewParty = (props) => {
         <p>Players: {partyDetail.players}</p>
         <p>Characters: {partyDetail.characters}</p>
       </div>
-      <button className="btn btn-danger" onClick={deleteParty}>
-        Delete
-      </button>
       <div>
-        <form onSubmit={handleUpdateParty}>
+        <form onSubmit={handleUpdateParty} className="updatePartyForm">
           <input
             type="text"
             name="Party Name"
@@ -146,6 +143,9 @@ const ViewParty = (props) => {
           </button>
         </form>
       </div>
+      <button className="btn btn-danger" onClick={deleteParty}>
+        Delete
+      </button>
     </div>
   )
 }

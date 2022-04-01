@@ -40,10 +40,10 @@ const ViewPlayer = (props) => {
     <div>
       <div>
         <div className="player-details">
-          <h3>{playerDetail.name}</h3>
+          <h3>Name: {playerDetail.name}</h3>
           <h4>Age: {playerDetail.age}</h4>
-          <h3>{playerDetail.location}</h3>
-          <p>{playerDetail.comment}</p>
+          <h3>Location: {playerDetail.location}</h3>
+          <p>Comment: {playerDetail.comment}</p>
           <button className="btn btn-danger" onClick={deletePlayer}>
             Delete
           </button>

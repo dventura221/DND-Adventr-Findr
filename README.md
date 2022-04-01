@@ -46,6 +46,10 @@ A fullstack app designed to connect Dungeons and Dragons players and parties, to
 
 ### **_Screenshots_**
 
+#### Home Page
+
+![Home](https://i.imgur.com/MI7RgoE.png)
+
 #### Entity Relationship Diagram
 
 ![ERD](https://i.imgur.com/RtbGVoq.png)
@@ -60,13 +64,13 @@ A fullstack app designed to connect Dungeons and Dragons players and parties, to
 
 ### **_Future Updates/Stretch Goals_**
 
-#### - [ ] Update 1 - Build back-end database
+#### - [X] Update 1 - Build back-end database
 
-#### - [ ] Update 2 - Build front-end
+#### - [X] Update 2 - Build front-end
 
-#### - [ ] Update 3 - Connect front-end and back-end
+#### - [X] Update 3 - Connect front-end and back-end
 
-#### - [ ] Update 4 - MVP
+#### - [X] Update 4 - MVP
 
 #### - [ ] Update 5 - Stretch Goal of adding communication into app, via email?
 

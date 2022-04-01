@@ -75,6 +75,7 @@ const CreateParty = () => {
         </select>
         <input
           type="text"
+          required
           name="Dungeon Master"
           value={addParty.dungeonMaster}
           placeholder="Dungeon Master"
@@ -84,6 +85,7 @@ const CreateParty = () => {
         ></input>
         <input
           type="text"
+          required
           name="Players"
           value={addParty.players}
           placeholder="Players"
@@ -93,6 +95,7 @@ const CreateParty = () => {
         ></input>
         <input
           type="text"
+          required
           name="Characters"
           value={addParty.characters}
           placeholder="Characters"

@@ -8,7 +8,7 @@ const Party = new Schema(
     looking4Players: { type: String, required: true },
     dungeonMaster: { type: String, required: true },
     players: [{ type: String, required: true }],
-    comment: { type: String, required: false }
+    comment: [{ type: String, required: false }]
   },
   { timestamps: true }
 )

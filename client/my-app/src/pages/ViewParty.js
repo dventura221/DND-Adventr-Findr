@@ -43,7 +43,8 @@ const ViewParty = (props) => {
     <div>
       <div className="party-details">
         <h2>{partyDetail.name}</h2>
-        <h3>{partyDetail.location}</h3>
+        <h3>Location: {partyDetail.location}</h3>
+        <h4>Looking for players? {partyDetail.looking4Players}</h4>
         <p>Format: {partyDetail.format}</p>
         <p>Comments: {partyDetail.comment}</p>
         <p>Dungeon Master: {partyDetail.dungeonMaster}</p>

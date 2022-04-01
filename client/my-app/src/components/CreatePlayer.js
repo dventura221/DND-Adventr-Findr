@@ -4,7 +4,7 @@ import axios from 'axios'
 const CreatePlayer = () => {
   const [addPlayer, setAddPlayer] = useState({
     name: '',
-    age: null,
+    age: undefined,
     location: '',
     looking4Party: '',
     comment: ''
